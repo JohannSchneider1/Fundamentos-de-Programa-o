@@ -1,1 +1,2 @@
-# Fundamentos-de-Programa-o
+# Fundamentos de Programação
+Johann Correa Schneider
