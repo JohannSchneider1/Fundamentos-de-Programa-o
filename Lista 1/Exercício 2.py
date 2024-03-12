@@ -2,4 +2,4 @@
 nome = input('Digite o seu nome ')
 
 #Imprimir a mensagem de boas vindas
-print('Olá ', nome, '!!!!!')
+print('Olá ', nome, ' seja bem vindo!!!!!')
