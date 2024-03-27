@@ -7,10 +7,6 @@ numerosorteado = random.randint(0,5)
 #Fazendo o usuário decidir se ele quer par ou impar
 escolha = int(input('Digite 1 para ÍMPAR e 2 para PAR: '))
 
-#se ele for engraçadinho deverá decidir novamente
-if escolha > 2:
-    escolha = int(input('Digite novamente sem palhaçada: '))
-
 #escolhendo a condição a qual o usuario decidiu
 if escolha == 1:
     print('Você escolheu ÍMPAR')
