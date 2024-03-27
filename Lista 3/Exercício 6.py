@@ -14,8 +14,10 @@ if escolha > 2:
 #escolhendo a condição a qual o usuario decidiu
 if escolha == 1:
     print('Você escolheu ÍMPAR')
-else :
+elif escolha == 2:
     print('Você escolheu PAR')
+else:
+    print('Escolha novamente: ')
 
 #colocando uma variavel de entrada para perguntar um numero 
 numero = int(input('Escolha um número de 0 até 5: '))
