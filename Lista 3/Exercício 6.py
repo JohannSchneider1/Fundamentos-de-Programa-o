@@ -24,9 +24,12 @@ total = numero + numerosorteado
 #Fazendo a condição para ver quem ganhou este mini game
 if total%2==0 and escolha == 2:
     print('Parabéns você ganhou, você colocou: ',numero,' e eu coloquei: ',numerosorteado, 'A soma total foi de: ', total, ' Logo deu PAR')
+
 elif total%2!=0 and escolha == 1:
     print('Parabéns você ganhou, você colocou: ',numero,' e eu coloquei: ',numerosorteado, 'A soma total foi de: ', total, ' Logo deu ÍMPAR')
+
 elif total%2 == 0 and escolha == 1:
     print('Parabéns para mim eu ganhei esta, você colocou: ',numero,' e eu coloquei: ',numerosorteado, 'A soma total foi de: ', total, ' Logo deu PAR')
+
 else:
     print('Parabéns para mim eu ganhei esta, você colocou: ',numero,' e eu coloquei: ',numerosorteado, 'A soma total foi de: ', total, ' Logo deu ÍMPAR')
