@@ -13,7 +13,7 @@ if escolha == 1:
 elif escolha == 2:
     print('Você escolheu PAR')
 else:
-    print('Escolha novamente: ')
+   escolha = print('Escolha novamente: ')
 
 #colocando uma variavel de entrada para perguntar um numero 
 numero = int(input('Escolha um número de 0 até 5: '))
