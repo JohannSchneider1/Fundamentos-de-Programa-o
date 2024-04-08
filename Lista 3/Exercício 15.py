@@ -19,15 +19,16 @@ elif alternativa == 3:
     valor = produto/2
 
 elif alternativa == 4:
-    juros = produto * 0.1 * 0.25
-    valor = produto + juros
+    juros = produto * 10/100
+    total = produto + juros
+    valor = total/3
 
 # condição para não confundir, caso queria parcelar e exibindo na tela o valor a ser pago, ja modificado
 if alternativa == 3:
-    print('O produto será parcelado em 2 vezes e terá o deço de: R$',valor,' Cada parcela')
+    print('O produto será parcelado em 2 vezes e terá o preço de: R$',valor,' Cada parcela')
 
 elif alternativa == 4:
-    print('O produto será parcelado em 3 vezes e terá o deço total de: R$',valor)
+    print('O produto será parcelado em 3 vezes e terá o preço de: R$',valor,' Cada parcela totalizando: R$',total)
 
 else:
     print ('O valor a ser pago é de: R$',valor)
