@@ -13,7 +13,7 @@ numero = int(input('Digite um número para descobrir a tabuada: '))
 #chamando a função para realizar a tabuada, sem precisar dicar escrevento o tempo todo
 tabuada(numero)
 
-#fazendo a tabiada do 0 até 10 chamando a tabuada e impementando a variavel i dentro da função
+#fazendo a tabuada do 0 até 10 chamando a tabuada e impementando a variavel i dentro da função
 for i in range (0,11):
     tabuada(i)
     print('-------------------------')
