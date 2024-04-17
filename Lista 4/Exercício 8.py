@@ -1,6 +1,6 @@
 alternativa = 's'
 
-while alternativa != 'n':
+while alternativa != 'n': #loop para ficar repetindo até que o usuario queira sair
 
     numero = int(input('Digite um número para realizar o farotial: '))
     resultado = 1
