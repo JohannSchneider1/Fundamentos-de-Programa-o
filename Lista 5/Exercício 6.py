@@ -21,7 +21,7 @@ def lootbox (comum,raro,lendario):
         return comum,raro,lendario #retornando/saindo todas as variáveis, por mais que só saia uma modificada
 
 def inventario(comum,raro,lendario):
-    
+    #exibindo os itens que adquiriu
     print('---------------------------------------------------------')
     print('Itens Lendários: ',lendario )
     print('Itens Raros: ',raro )
@@ -33,16 +33,17 @@ saida = 1
 comum = 0
 raro = 0
 lendario = 0
-while saida != 0 :
 
+while saida != 0 : #loop para ficar repetindo o codigo
+    #exibindo as informações
     print('---------------------------------------------------------')
     print('1 - Caixa de Itens\n2 - Invertário\n0 - Sair do Programa')
     escolha = int(input('Digite a alternativa desejada: '))
 
-    if escolha == 1:
-        comum,raro,lendario = lootbox(comum,raro,lendario)
+    if escolha == 1: #condição em relação a escolha
+        comum,raro,lendario = lootbox(comum,raro,lendario) #chamando a função e os valores que são retornados da lootbox está salvando nas respectivas variáveis
 
     elif escolha == 2:
-        inventario(comum,raro,lendario)
+        inventario(comum,raro,lendario) #chamando a função e mostrando o inventário
     else:
         saida = 0
