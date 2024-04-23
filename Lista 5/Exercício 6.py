@@ -1,38 +1,28 @@
+#importando a biblioteca de geradores de numeros aleatórios
 import random
 ############# Funções ##################
-def lootbox ():
-    comum = 0
-    raro = 0
-    lendario = 0
-    sorte = random.randint(0,100)
-    if sorte == 100:
+#função para gerar a lootbox 
+def lootbox (comum,raro,lendario):
+    sorte = random.randint(0,100) #gerando um numero de 0 a 100
+
+    if sorte == 100: #condição para saber se o numero sorteado foi o 100
         print('Parabésn Você acaba de ganhar um item LENDÁRIO')
-        lendario = lendario + 3
-        return lendario
+        lendario = lendario + 1 #adicionando em 1 a variavel
+        return comum,raro,lendario #retornando/saind todas as variáveis, por mais que só saia uma modificada
 
-    elif sorte >=0 and sorte<=80:
+    elif sorte >=0 and sorte<=80: #condição para saber se o numero sorteado foi entre 0 a 80
         print('Você tirou um item COMUM')
-        comum = comum + 1
-        return comum
+        comum = comum + 1 #adicionando em 1 a variavel
+        return comum,raro,lendario #retornando/saindo todas as variáveis, por mais que só saia uma modificada
 
-    elif sorte >=81 and sorte<=99:
+    elif sorte >=81 and sorte<=99: #condição para saber se o numero sorteado foi entre 81 a 99
         print ('Você acaba de tirar um item RARO')
-        raro = raro + 2
-        return raro
+        raro = raro + 1 #adicionando em 1 a variavel
+        return comum,raro,lendario #retornando/saindo todas as variáveis, por mais que só saia uma modificada
 
-def inventario(raridade):
-    lendario = 0
-    raro = 0
-    comum = 0
-
-    if raridade == 3:
-        lendario = lendario +1
-        
-    elif raridade == 2:
-        raro = raro +1
-        
-    elif raridade == 1:
-        comum = comum + 1
+def inventario(comum,raro,lendario):
+    
+    print('---------------------------------------------------------')
     print('Itens Lendários: ',lendario )
     print('Itens Raros: ',raro )
     print('Itens Comuns: ',comum )
@@ -40,16 +30,19 @@ def inventario(raridade):
 
 ############ Programa Principal ###############
 saida = 1
-
+comum = 0
+raro = 0
+lendario = 0
 while saida != 0 :
+
+    print('---------------------------------------------------------')
     print('1 - Caixa de Itens\n2 - Invertário\n0 - Sair do Programa')
     escolha = int(input('Digite a alternativa desejada: '))
 
     if escolha == 1:
-        raridade = lootbox()
-        inventario(raridade)
+        comum,raro,lendario = lootbox(comum,raro,lendario)
 
     elif escolha == 2:
-        inventario(0)
+        inventario(comum,raro,lendario)
     else:
         saida = 0
