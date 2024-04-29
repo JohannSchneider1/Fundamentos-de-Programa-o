@@ -68,7 +68,7 @@ H2 = 0
 # 3 empate
 vencedor = 0
 
-while vencedor == 0: #continu a 
+while vencedor == 0: #continua 
     #limpando a tela do console a cada ciclo// escolhe onde a tela irá resetar, neste caso no inicio do ciclo//animação
     os.system('cls' if os.name=='nt' else 'clear')
 
