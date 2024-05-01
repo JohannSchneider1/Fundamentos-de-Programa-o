@@ -1,0 +1,27 @@
+Trabalho realizado por 
+Johann Correa Schneider
+
+os botões nescessários para jogar são
+
+1 e 2 para decidir a quantidade de jogadores
+
+e para andar pelo tabuleiro utiliza-se A para o jogador 1 e S para o jogador 2
+
+Acabei comentando as coisas no jogador 2 então o jogador 1 repete a mesma coisa
+
+Consegui fazer:
+movimentação
+dado
+morrer
+desafiomatemático
+formatura
+terfilho
+casar
+ficarfamoso
+divorciar
+loteria
+resetar
+
+
+Faltou:
+não consegui fazer para que o jogador que perder uma ação não possa andar até que o segundo jogador jogue 2 vezes
