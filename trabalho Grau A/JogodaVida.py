@@ -1,6 +1,8 @@
+#importando biblioteca para poder gerar numeros aleatórios
 import random
 
 ########## FUNÇÕES #############
+#função para matar o jogador
 def morto(jogadorvivo):
         
     print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
@@ -9,7 +11,7 @@ def morto(jogadorvivo):
 
     return jogadorvivo
 
-
+#função para fazer com que os jogadores andem pelo tabuleiro
 def movimentar (jogador):
     sorteio = random.randint(1,6)
 
@@ -39,7 +41,7 @@ def movimentar (jogador):
     
     return jogador
 
-
+#função para decidir se o personagem vai avançar 1 voltar 1 ou ficar parado
 def dado (jogador):
     
     sorte = random.randint(1,6)
@@ -62,9 +64,9 @@ def dado (jogador):
     
     print(jogador)
     
-    return jogador,sorte
+    return jogador
 
-
+#verificando se alguém já ganhou
 def ganhador(jogador1,jogador2):
     vencedor = 0
     if jogador1 == 21:
@@ -76,7 +78,7 @@ def ganhador(jogador1,jogador2):
 
     return vencedor
 
-
+#função para verificar se o número é primo ou não
 def primo ():
     #se a variavel teste for um numero primo que será testado depois ao invés disso já considera ele sendo um numero primo
         print('-------------------------------------------------------------------')
@@ -106,7 +108,7 @@ def primo ():
             
             if resultado == True:
                 print(teste)
-
+#função para soma de todos os numeros de 1 até 10
 def soma ():
     valor = 0
     print('-------------------------------------------------------------------')
@@ -115,7 +117,7 @@ def soma ():
         valor = valor + numero
     
     print(valor)
-
+#função que faz a série de fibonacci até os 10 primeiros elementos
 def fibonacci ():
     ultimo = 1
     penultimo = 1
@@ -126,27 +128,27 @@ def fibonacci ():
         penultimo = ultimo
         ultimo = resultado
         print (resultado)
-
+#função que calcula a área de um círculo com um raio de 2.5
 def circulo ():
     pi = 3.14159265358979323846
     area = pi * (2.5 * 2.5)
     print('-------------------------------------------------------------------')
     print ('A Área de um circulo com 2,5 de raio é:\n',round(area,2))
-
+#função que faz o fatorial de 5
 def fatorial ():
     valor = 1
     for n in range(1,6):
         valor = valor * n
     print('-------------------------------------------------------------------')
     print('O fatorial de 5 é: \n',valor)
-
+#função que verifica os 5 primeiros numeos divididos por 2 e 5
 def divisao ():
     print('-------------------------------------------------------------------')
     print('Os 5 primeiros numeros divisiveis por 2 e 5 são:')
     for n in range (1,51):
         if n%2 == 0 and n%5 == 0:
             print(n)
-
+#chama as funções de cima e sorteia qual será exibida
 def desafios ():
     sorteado = random.randint(1,6)
 
@@ -163,7 +165,7 @@ def desafios ():
     elif sorteado == 6:
         divisao()
 
-
+#função para sortear em qual curso a pessoa se formou
 def formar (jogadorformado):
 
     sorteio = random.randint(1,6)
@@ -194,7 +196,7 @@ def formar (jogadorformado):
 
     return jogadorformado
 
-
+#função que verifica se a pessoa ficou famosa ou não
 def famoso (fama):
     
     fama = True
@@ -202,7 +204,7 @@ def famoso (fama):
 
     return fama
 
-
+#função para ficar adicionando filhos na família e sorteia um número que se cair tem gêmeos
 def filhos (filho):
 
     gemeos = random.randint (1,6)
@@ -216,7 +218,7 @@ def filhos (filho):
     
     return filho
 
-
+#função para sortear quanto que a pessoa ganhou na loteria
 def loteria (dinheiro):
     sorte = random.randint(1,6)
 
@@ -241,20 +243,21 @@ def loteria (dinheiro):
 
     return dinheiro
             
-
+#função que faz a pessoa se casar
 def casado (casamento):
 
     print('-------------------------------------------------------------------')
     print('Parabéns você se casou')
     casamento = True 
     return casamento
-
+#função que faz a pessoa ter um divórcio
 def divorcio (casamento):
     print('-------------------------------------------------------------------')
     print('Você acaba de se Divorciar após ver seu/sua parceiro(a) o(a) Traindo')
     casamento = False
     return casamento
 
+#função que faz o jogador resetar tudo o que tem e volta para o inicio
 def tempo (jogador,filhos,dinheiro,formado,famoso,casado):
     print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
     print('Você acaba de entrar em uma máquina do tempo, retorne ao inicio e perca tudo o que conquistou durante sua vida')
@@ -268,7 +271,7 @@ def tempo (jogador,filhos,dinheiro,formado,famoso,casado):
     return jogador,filhos,dinheiro,formado,famoso,casado
 
 ################ PROGRAMA ################
-
+#variáveis utilizadas
 jogador1 = 0
 jogador2 = 0
 vencedor = 0
@@ -286,29 +289,27 @@ casado1 = False
 casado2 = False
 jogadorvivo1 = True
 jogadorvivo2 = True
-luck = 0
-cont = 2
 
 
-escolha = int(input('Digite 1 para apenas um jogador e 2 para dois jogadores '))
+escolha = int(input('Digite 1 para apenas um jogador e 2 para dois jogadores ')) #variavel de entrada para saber se vai ser 1 ou 2 jogadores
 
 while vencedor == 0 and jogadorvivo1 == True and jogadorvivo2 == True:
 
-    if escolha == 1:
+    if escolha == 1: #caso escolha um jogador execute
         print('-------------------------------------------------------------------')
         movimento = (input('Digite a letra A para poder movimentar\n'))
         if movimento == 'a':
             jogador1 = movimentar(jogador1)
             print(jogador1)
 
-    elif escolha == 2:
+    elif escolha == 2: #caso escolha dois jogadores execute
         print('-------------------------------------------------------------------')
         movimento = input('Digite a letra A para o jogador 1 poder andar\nDigite a letra S para o jogador 2 poder movimentar:\n ')
 
         if movimento == 'a':
             jogador1 = movimentar(jogador1)
 
-        elif movimento == 's':
+        elif movimento == 's': # movimentação do jogador 2
             jogador2 = movimentar(jogador2)
         
         print(jogador1,jogador2)
@@ -317,7 +318,7 @@ while vencedor == 0 and jogadorvivo1 == True and jogadorvivo2 == True:
     if passado1 != jogador1:
 
         if jogador1 == 1 or jogador1 == 3 or jogador1 == 10 or jogador1 == 17: 
-            jogador1,luck = dado(jogador1)
+            jogador1= dado(jogador1)
             
         if jogador1 == 20:
             jogador1,filhos1,dinheiro1,jogador1formado,fama1,casado1 = tempo(jogador1,filhos1,dinheiro1,jogador1formado,fama1,casado1)
@@ -349,42 +350,43 @@ while vencedor == 0 and jogadorvivo1 == True and jogadorvivo2 == True:
         passado1 = jogador1
 
 
-    if passado2 != jogador2:
+    if passado2 != jogador2: #condição para que não repita a ação estando na mesma casa
 
-        if jogador2 == 1 or jogador2 == 3 or jogador2 == 10 or jogador2 == 17:
-            jogador2,luck = dado(jogador2)
+        if jogador2 == 1 or jogador2 == 3 or jogador2 == 10 or jogador2 == 17: #condição para chamar a função dados
+            jogador2 = dado(jogador2)
 
-        if jogador2 == 20:
+        if jogador2 == 20: #condição para chamar a função tempo
             jogador2,filhos2,dinheiro2,jogador2formado,fama2,casado2 = tempo(jogador2,filhos2,dinheiro2,jogador2formado,fama2,casado2)
 
-        if jogador2 == 4 or jogador2 == 11 or jogador2 == 19:
+        if jogador2 == 4 or jogador2 == 11 or jogador2 == 19: #condição para chamar a função desafios
             desafios()
 
-        if jogador2 == 15:
+        if jogador2 == 15: #condição para chamar a função famoso
             fama2 = famoso(fama2)
         
-        if jogador2 == 5:
-            jogador2formado = formar(jogador2formado)
+        if jogador2 == 5: #cindição para chamar a função formar
+            jogador2formado = formar(jogador2formado) 
         
-        if jogador2 == 6 or jogador2 == 9 or jogador2 == 13:
+        if jogador2 == 6 or jogador2 == 9 or jogador2 == 13: #condição para chamar a função filhos
             filhos2 = filhos(filhos2)
         
-        if jogador2 == 14:
+        if jogador2 == 14: #condição para chamar a função loteria
             dinheiro2 = loteria(dinheiro2)
         
-        if jogador2 == 7 or jogador2 == 16:
+        if jogador2 == 7 or jogador2 == 16: #condição para chamar a função casado
             casado2 = casado (casado2)
         
-        if jogador2 == 12:
+        if jogador2 == 12: # condição para chamar a função divorcio
             casado2 = divorcio(casado2)
         
-        if jogador2 == 2 or jogador2 == 8 or jogador2 == 18:
+        if jogador2 == 2 or jogador2 == 8 or jogador2 == 18: #condição para chamar a função morto
             jogadorvivo2 = morto(jogadorvivo2)
         
-        passado2 = jogador2
+        passado2 = jogador2 #condição para que só aconteça uma vez a ação caso fique mais de um turno na mesma casa
 
-    vencedor = ganhador(jogador1,jogador2)
+    vencedor = ganhador(jogador1,jogador2) # Chamando a variavel ganhador
 
+#Vendo quem venceu quando algúem morreu
 if jogadorvivo1 == False:
     vencedor = 2
 if jogadorvivo2 == False:   
@@ -392,7 +394,7 @@ if jogadorvivo2 == False:
 if jogadorvivo1 == False and escolha == 1:
     vencedor = 3
 
-
+#exibindo a vida do jogador 1 que ganhou
 if vencedor == 1:
     print('---------------------------------------------------------')
     print('Jogador 1 é o vencedor')
@@ -408,6 +410,7 @@ if vencedor == 1:
     if jogador1formado == True:
         print('Você se formou')
 
+#exibindo a vida do jogador 2 que ganhou
 if vencedor == 2:
     print('Jogador 2 é o vencedor')
     print('Veja a sua vida:')
@@ -422,5 +425,6 @@ if vencedor == 2:
     if jogador2formado == True:
         print('Você se formou') 
 
+#exibindo game over caso esteja solo
 if vencedor == 3:
     print('Game Over')
