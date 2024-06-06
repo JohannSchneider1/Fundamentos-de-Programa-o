@@ -1,3 +1,11 @@
+#função que percorre os elementos do array por indice e imprime o seus valores
+def imprimirvetor (V):
+    n = len(V)
+    for i in range (n):
+        print(V[i],end = ' ')
+    
+#-------------------------------------------------------------------------------------
+
 #percorrendo/varrendo pelo Array
 
 #por elemento / percorrendo os elementos do array E
@@ -20,3 +28,19 @@ i = 0
 while i < len(A):
     print('A[{}] = {}'.format(i,A[i]))
     i = i+1
+
+#Criando um Array Vazio
+vet = []
+
+# Ler do usuário o numero de elementos do Array
+
+n = int(input('Digite o numeros de elementos do array: '))
+
+# Preencer o vetor com os numeros lidos do usuário
+for i in range(n):
+    #Ler o valor e armazenar no elemento em uma variavel
+    valor = int(input('Digite o valor do elelmento'))
+    #append serve para acrecentar no array e assim aumentando o seu tamanho
+    vet.append(valor)
+
+imprimirvetor(vet)
