@@ -20,7 +20,7 @@ def gerarToupeiras ():
     while toupeiras < 4:
         i = random.randint(0, 3)
         j = random.randint(0, 3)
-        if matriz[i][j] == '-': #Subistituindo os algoritmos '-' por 'T' #Só adiciona toupeira SE estiver vazio o lugar
+        if matriz[i][j] == '-': #Subistituindo os algoritimos '-' por 'T' #Só adiciona toupeira SE estiver vazio o lugar
             matriz[i][j] = 'T'
             toupeiras += 1 #condição para sair do loop
 
@@ -28,6 +28,8 @@ def gerarToupeiras ():
 
 #Gerando 3 saidas diferentes
 for i in range (1,4):
+    print('##############')
+
     matriz = gerarToupeiras()
 
     imprimirMatriz(matriz)
