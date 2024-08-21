@@ -6,7 +6,7 @@ while cont < 6:
 
 
     if quantidade>= 5 and quantidade<=10 and numeros == True:
-        cont = cont + 7
+        cont = cont +7
         print('sucesso')
 
     else:
