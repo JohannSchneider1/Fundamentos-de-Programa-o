@@ -38,7 +38,7 @@ def main():
     irmaos = int(input('Digite a quantidade de irmãos: '))
     endereco = input('Digite seu endereço: ')
     p2 = Pessoa(nome,idade,altura,irmaos,endereco)
-    p1.imprime_infos()
+    p2.imprime_infos()
     if p2.is_filhos_unicos():
         print(nome,'É filho unico')
     else:
@@ -50,7 +50,7 @@ def main():
     irmaos = int(input('Digite a quantidade de irmãos: '))
     endereco = input('Digite seu endereço: ')
     p3 = Pessoa(nome,idade,altura,irmaos,endereco)
-    p1.imprime_infos()
+    p3.imprime_infos()
     if p3.is_filhos_unicos():
         print(nome,'É filho unico')
     else:
