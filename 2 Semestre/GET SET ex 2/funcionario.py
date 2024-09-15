@@ -47,19 +47,8 @@ class Funcionario:
         return resultado
     
     def imprime_info (self):
+        print('=========Dados do Funcionário===========')
         print('Nome: ',self.nome)
         print('Endereco: ',self.endereco)
         self.calculadora.imprime_info()
-
-def main ():
-    nome = input('Digite o seu nome: ')
-    endereco = input('Digite seu endereco: ')
-    memoria = int(input('Digite quanto de memoria tem a sua calculadora: '))
-    cor = input('Digite qual a cor de sua calculadora: ')
-    calculadora = Calculadora (cor,memoria)
-
-    pessoa = Funcionario(nome,endereco,calculadora)
-    pessoa.imprime_info()
-
-if __name__ == '__main__':
-    main()
+        print('========================================')

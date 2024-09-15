@@ -19,41 +19,33 @@ class Calculadora:
     def cor(self,cor):
         self.__cor = cor
 
-    def soma (v1:float, v2:float):
+    def soma (self,v1:float, v2:float):
         resultado = v1 + v2
         return resultado
     
-    def subtracao (v1:float, v2:float):
+    def subtracao (self,v1:float, v2:float):
         resultado = v1 - v2
         return resultado
     
-    def multiplica (v1 : float, v2 : float):
+    def multiplica (self,v1 : float, v2 : float):
         resultado = v1 * v2
         return resultado
     
-    def divisao (v1 : float, v2 : float):
+    def divisao (self,v1 : float, v2 : float):
         resultado = v1/v2
         return resultado
     
-    def eleva_ao_quadrado (v1 : int):
+    def eleva_ao_quadrado (self,v1 : int):
         resultado = v1**2
         return resultado
     
-    def eleva_ao_cubo(v1 : int):
+    def eleva_ao_cubo(self,v1 : int):
         resultado = v1**3
         return resultado
     
     def imprime_info (self):
+        print('=========Dados da Calculadora===========')
         print('Sua calculadora tem: ',self.memoria,' Memoria')
         print('Sua calculadora tem a cor: ',self.cor)
-
-
-def main():
-    memoria = int(input('Digite quanto de memoria tem a sua calculadora: '))
-    cor = input('Digite qual a cor de sua calculadora: ')
+        print('========================================')
     
-    r = Calculadora(cor,memoria)
-    r.imprime_info()
-
-if __name__ == '__main__':
-    main()
