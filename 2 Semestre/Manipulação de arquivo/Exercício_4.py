@@ -1,5 +1,5 @@
 class Pessoa:
-    def __init__ (self,nome,idade,altura,peso):
+    def __init__ (self,nome='',idade=0,altura=0.0,peso=0):
         self.__nome = nome
         self.__idade = idade
         self.__altura = altura
@@ -44,30 +44,33 @@ class Pessoa:
         print('Altura: ',self.altura)
         print('Peso: ',self.peso)
 
-    def carregar (self):
-        texto = open('cadastro.txt','r')
-        leitura = texto.readline()
-        dados = list (leitura)
-    
-        cadastro = []
-        self.nome = dados [0]
-        self.idade = dados[1]
-        self.altura = dados[2]
-        self.peso = dados [3]
 
-        cadastro.append(self.nome)
-        cadastro.append(self.idade)
-        cadastro.append(self.altura)
-        cadastro.append(self.peso)
+    def carregar(self, arquivo: str):
+        texto = open(arquivo, "r")
+        self.nome = texto.readline()
+        self.idade = int(texto.readline())
+        self.altura = float(texto.readline())
+        self.peso = float(texto.readline())
+        texto.close()
 
-        return cadastro
-
-
+    def salvar(self, arquivo: str):
+        texto = open(arquivo, "w")
+        texto.write(self.nome + "\n")
+        texto.write(str(self.idade) + "\n")
+        texto.write(str(self.altura) + "\n")
+        texto.write(str(self.peso))
+        texto.close()
 
 def main ():
-
-    
-    p = Pessoa
+    p = Pessoa()
+    p.carregar("cadastro.txt")
+    p.visualizar()
+    p.nome = "jhonathan"
+    p.idade = 25
+    p.altura = 2.10
+    p.peso = 150
+    p.salvar("cadastro.txt")
+    p.visualizar()
 
 if __name__ == '__main__':
     main()
