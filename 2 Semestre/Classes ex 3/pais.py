@@ -55,6 +55,8 @@ class Pais:
 
         if not isinstance(pais1, Pais): #Garante que pais1 é um objeto da classe Pais. Se não for, retorna False.
             return False
+        elif id(self) == id(pais1):
+            return True
         elif self.iso == pais1.iso:
             return True
         else:
@@ -66,11 +68,11 @@ class Pais:
     
     
     def limitrofe(self, pais1: Pais):
-        if pais1 in self.fronteira:
+        if pais1.nome in self.fronteira:
             print('O País:', pais1.nome, 'é limítrofe de', self.nome)
         else:
             print('O País:', pais1.nome, 'não é limítrofe de', self.nome)
-            
+
     
     def vizinhos (self,pais1:Pais):
         front = []

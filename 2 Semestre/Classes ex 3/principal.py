@@ -93,15 +93,12 @@ def main ():
     africa_do_sul.adiciona_fronteira('Essuatíni')
     africa_do_sul.adiciona_fronteira('Zimbábue')
 
-    ##########################
+
     alemanha.limitrofe(franca)
     brasil.limitrofe(espanha)
-    ###########################
 
     print('A dencidade populacional da Argentina é de: ',argentina.dencidade())
-
     print('As fronteiras em comum entre Brasil e Argentina são: ',brasil.vizinhos(argentina))
-
     print('A dimensao territorial da Africa é de ',africa.dimensao_continente())
     print('A população da Europa é de ', europa.populacao_continente())
     print('A densidade populacional da América do Sul é de: ', america_do_sul.densicade_continente())
