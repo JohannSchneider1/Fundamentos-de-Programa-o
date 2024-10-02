@@ -67,7 +67,7 @@ def main ():
     p.visualizar()
     p.nome = "jhonathan"
     p.idade = 25
-    p.altura = 2.10
+    p.altura = 8
     p.peso = 150
     p.salvar("cadastro.txt")
     p.visualizar()
