@@ -1,0 +1,6 @@
+0	 	0.00
+1	Cerveja	10.00
+2	Água	5.00
+3	Refrigerante	7.00
+4	Sanduíche	15.00
+5	Café	3.00

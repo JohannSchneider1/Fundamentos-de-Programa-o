@@ -1,11 +1,13 @@
 class Reserva:
-    def __init__(self,dia_inicio, dia_fim, cliente, quarto, status):
+    #criando o objeto reserva
+    def __init__(self, dia_inicio, dia_fim, cliente, quarto, status):
         self.__dia_inicio = dia_inicio
         self.__dia_fim = dia_fim
         self.__cliente = cliente
         self.__quarto = quarto
         self.__status = status
-    
+
+    #criando get e set
     @property
     def dia_inicio (self):
         return self.__dia_inicio

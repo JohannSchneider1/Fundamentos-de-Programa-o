@@ -1,11 +1,12 @@
 class Produtos:
+    #criando o objeto Produtos
     def __init__(self,codigo,nome,preco):
         self.__codigo = codigo
         self.__nome = nome
         self.__preco = preco
         self.produtos = []
 
-    
+    #criando get e set
     @property
     def codigo (self):
         return self.__codigo
